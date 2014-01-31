@@ -23,3 +23,11 @@ function wsu_calendar_rss_item() {
 	}
 
 }
+
+add_action( 'rss2_ns', 'wsu_calendar_rss_namespace' );
+
+function wsu_calendar_rss_namespace() {
+	?>
+	xmlns:ev="http://purl.org/rss/1.0/modules/event/"
+	<?php
+}
