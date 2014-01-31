@@ -1,0 +1,235 @@
+/*
+ Theme Name:     WSU News Calendar Theme
+ Theme URI:      http://calendar.wsu.edu
+ Description:    Child theme of Twenty Thirteen for the WSU News Calendar
+ Template:       twentythirteen
+ Version:        0.1
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('../twentythirteen/style.css');
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+/* in order for the current WSU theme to display correctly */
+* {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* fonts */
+
+h1,h2,h3,h4,h5,h6{
+	font-family: inherit;
+}
+
+
+/* buttons */
+button, input[type="submit"], input[type="button"], input[type="reset"] {
+	background: #c60c30;
+	border-bottom: 3px solid #981e32;
+}
+button:hover, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover{
+	background: #981e32;
+	border-bottom: 3px solid #c60c30;
+}
+
+/* link color changes */
+.hentry a, #tribe-events-content a{
+	text-decoration: none;
+	color: #981e32;
+}
+.hentry a:active, .hentry a:hover, #tribe-events-content a:hover{
+	color: #c60c30;
+}
+
+.entry-meta a, .entry-content a, .comment-content a, .navigation a{
+	color: #981e32;
+}
+.entry-meta a:hover, .entry-content a:hover, .comment-content a:hover,.navigation a:hover{
+	color: #c60c30;
+}
+
+
+/* global nav search box adjustments */
+input{
+	padding: inherit;
+}
+input:focus, textarea:focus{
+	border: 1px solid #5e6a71;
+}
+textarea{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+button, input, textarea{
+	border: 1px solid #e7e9ea;
+}
+#searchbuttonimg{
+	padding-top:0;
+}
+
+
+/* inherit WSU nav styles */
+.nav-menu li{
+	display:block;
+}
+.nav-menu li a{
+	font-size: inherit;
+	line-height: inherit;
+	padding: inherit;
+}
+.nav-menu li:hover > a, .nav-menu li a:hover{
+	background: none;
+}
+
+#nav .nav-menu .current_page_item > a, #nav .nav-menu .current_page_ancestor > a, #nav .nav-menu .current-menu-item > a, #nav .nav-menu .current-menu-ancestor > a{
+	font-style: normal;
+	color: #981e32;
+}
+
+/* ----------------------- */
+/* content area adjustments */
+
+
+
+.entry-content img.alignleft, .entry-content .wp-caption.alignleft{
+	margin-left: 0;
+}
+.entry-content img.alignright, .entry-content .wp-caption.alignright{
+	margin-right: 0;
+}
+.wp-caption .wp-caption-text, .entry-caption, .gallery-caption{
+	color: #5e6a71;
+	font-size: 0.9em;
+	font-style: normal;
+	padding-top: 12px;
+}
+.entry-meta{
+	font-size: 1em;
+}
+.more-link{ /*block the element*/
+	display: block;
+	text-align: right;
+	margin-top: 10px;
+}
+.post-navigation{
+	font-size: 1em;
+	font-style: normal;
+}
+.post-navigation h1{
+	display: none;
+}
+.post-navigation a{
+	padding-bottom: 10px;
+}
+.paging-navigation{
+	background: none;
+	padding: 0;
+}
+.paging-navigation .meta-nav, .paging-navigation a:hover .meta-nav, .paging-navigation .nav-previous .meta-nav{
+	background: none;
+	width: auto;
+	color: inherit;
+}
+.paging-navigation .nav-links{
+
+}
+.nav-links{
+	padding: 0;
+}
+.nav-links a:first-child{
+	float: left;
+}
+.comments-area{
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #5e6a71;
+}
+
+.comment-respond{ /* comments */
+	background: none;
+	border-top: 1px solid #5e6a71;
+}
+
+.comment-author .avatar{
+	display: none;
+}
+
+#comments input{
+	padding: 3px;
+}
+/* archive header also for category and tag head */
+.archive-header{
+	background: none;
+	padding: 0;
+}
+.archive-title, .archive-meta{
+	text-transform: uppercase;
+	font-style: normal;
+	font-size: 1.25em;
+}
+
+/* -------------------- */
+/* WSU Styles overrides */
+
+#siteID{
+	background: #981e32;
+	box-shadow: inset 0 0 150px #262b2d;
+	box-shadow: inset 0 0 150px rgba(0,0,0,.5);
+}
+
+
+/* Calendar changes */
+#main{
+	width: 735px;
+	padding: 20px;
+}
+
+#content #main ul{
+	margin: 0;
+	padding: 0;
+}
+.tribe-bar-views-inner{
+	background: none;
+}
+.tribe-events-calendar thead th{
+	background: #5e6a71;
+}
+.tribe-bar-mini .tribe-bar-views-inner{
+	padding-bottom: 0;
+}
+.tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"]>a, #tribe_events_filters_wrapper input[type=submit], .tribe-events-button, .tribe-events-button.tribe-inactive, .tribe-events-button:hover, .tribe-events-button.tribe-active:hover{
+	background: #981e32;
+}
+#tribe-events-content .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"] a{
+	color: #fff;
+}
+
+#tribe-events-content .tribe-events-tooltip h4, #tribe_events_filters_wrapper .tribe_events_slider_val, .single-tribe_events a.tribe-events-ical, .single-tribe_events a.tribe-events-gcal{
+	color: #5e6a71;
+}
+ul.tribe-events-sub-nav a, .tribe-events-back a, .tribe-events-list-widget .tribe-events-widget-link a, .tribe-events-adv-list-widget .tribe-events-widget-link a{
+	font-size: 1em;
+}
+.tribe-events-calendar div[id*="tribe-events-daynum-"], .tribe-events-calendar div[id*="tribe-events-daynum-"] a{
+	background: #e7e9ea;
+}
+
+#tribe-events-content .tribe-events-calendar div[id*="tribe-events-event-"] h3.tribe-events-month-event-title{
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.single-tribe_events .tribe-events-event-meta{
+	overflow: hidden;
+}
+.entry-content{
+	max-width: inherit;
+}
+
