@@ -15,10 +15,12 @@ function wsu_calendar_rss_item() {
 	$end_date   = get_post_meta( $post->ID, '_EventEndDate',   true );
 
 	if ( $start_date ) {
+		$start_date = date( 'r', strtotime( $start_date ) );
 		echo '<ev:startdate>' . esc_html( $start_date ) . '</ev:startdate>';
 	}
 
 	if ( $end_date ) {
+		$end_date = date( 'r', strtotime( $end_date ) );
 		echo '<ev:enddate>' . esc_html( $end_date ) . '</ev:enddate>';
 	}
 
