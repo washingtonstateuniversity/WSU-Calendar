@@ -1,2 +1,2 @@
-# calendar.wsu.edu
+# [calendar.wsu.edu](http://calendar.wsu.edu)
 
