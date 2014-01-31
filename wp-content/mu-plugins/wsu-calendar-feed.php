@@ -19,7 +19,7 @@ function wsu_calendar_rss_item() {
 	}
 
 	if ( $end_date ) {
-		echo '<ev.enddate>' . esc_html( $end_date ) . '</ev:enddate>';
+		echo '<ev:enddate>' . esc_html( $end_date ) . '</ev:enddate>';
 	}
 
 }
