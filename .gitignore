@@ -3,6 +3,7 @@
 *.sublime*
 wordpress
 wp-config.php
+wp-content/plugins/wordpress-importer
 wp-content/plugins/wsuwp-sso-authentication
 wp-content/upgrade
 wp-content/uploads
